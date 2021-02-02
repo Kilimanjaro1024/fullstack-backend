@@ -8,7 +8,7 @@
     "morgan": "^1.10.0"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "cross-env NODE_ENV=development node server.js",
     "dev": "cross-env NODE_ENV=development nodemon server.js"
   },
   "name": "fullstack-backend",
