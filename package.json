@@ -9,8 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "cross-env NODE_ENV=development nodemon server.js",
-    "db"
+    "dev": "cross-env NODE_ENV=development nodemon server.js"
   },
   "name": "fullstack-backend",
   "version": "1.0.0",
