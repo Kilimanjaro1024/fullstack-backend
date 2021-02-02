@@ -1,5 +1,6 @@
 const Wand = require('../models/Wand')
 const Student = require('../models/Student')
+const mongoose = require('./connection')
 
 Student.find({}).remove(() => {
     Wand.find({}).remove(() => {

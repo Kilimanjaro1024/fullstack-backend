@@ -6,12 +6,23 @@ const mongoose = require("./db/connection");
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
-// const dogRouter = require("./controllers/dog");
+const studentRouter = require("./controllers/Student.js");
+const wandRouter = require("./controllers/Wand.js");
+
+
+
 /////MIDDLEWARE///////
+// app.use(cors())
+app.use(express.urlencoded({extended:false}))
+app.use(express.json())
+app.use(morgan())
 // ROUTE FOR TESTING SERVER IS WORKING
 app.get("/", (req, res) => {
     res.json({ hello: "Hello World!" });
 });
+
+app.use('/wands', wandRouter)
+app.use('/students', studentRouter)
 // Dog Routes send to dog router
 // app.use("/dog", dogRouter);
 //LISTENER
