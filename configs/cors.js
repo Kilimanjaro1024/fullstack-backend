@@ -1,5 +1,5 @@
 //Add your frontend url as a string to the whitelist to enable security
-var whitelist = [];
+var whitelist = ["*"];
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.length === 0) {
